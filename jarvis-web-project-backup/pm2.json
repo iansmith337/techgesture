@@ -1,5 +1,11 @@
 {
-"apps": {
-  {
-      "name": "Web Server"'
+	"apps": [
+  	 {
+      		"name": "Server",
+		"script": "npm",
+		"args": "run dev",
+		"autorestart": false
+  	 } 
+	]	
+}
 

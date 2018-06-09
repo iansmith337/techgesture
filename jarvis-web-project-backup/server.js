@@ -1,10 +1,19 @@
-var express = require('express')
-var app = express()
+var express = require('express'),
+    path =require('path')
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname,'index.html'))
-})
+var APP_DIR = path.join(__dirname, "app"),
+	PORT = 3000,
+	app = express();
 
-app.listen('4000', function() {
-  console.log('running on port 3000')
+app.use(express.static(APP_DIR));
+
+app.get('/#', function (req, res) {
+
+ //res.send('hello for Jarvis-Web-Project')	
+ res.sendFile(path.join(APP_DIR,"index.html"));
+
+});
+
+app.listen(PORT, function() {
+  console.log('listening on port '+ PORT)
 })

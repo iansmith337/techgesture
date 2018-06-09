@@ -2,10 +2,10 @@
   "name": "jarvis-web-project",
   "version": "1.0.0",
   "description": "",
-  "main": "web-server.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node web-server.js",
+    "start": "node server.js",
     "dev": " webpack && npm start"
   },
   "author": "Coda",

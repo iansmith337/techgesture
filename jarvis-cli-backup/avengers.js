@@ -16,13 +16,14 @@ class Avengers {
       this.marvel.characters.findByName('daredevil'),
       this.marvel.characters.findByName('iron man')])
     .then((responses) => {
-      let heroProfiles = []
+      let avengers = []
       responses.forEach((character) => {
       let profile = new Profile({name:character.data[0].name,description: character.data[0].description})
-      heroProfiles.push(profile.createProfile())
+      avengers.push(profile.createProfile())
    })
       console.log('Avengers Assemble')
-      cb(JSON.stringify(heroProfiles))
+      console.log(avengers)
+	cb(avengers)
   })
 }
 }

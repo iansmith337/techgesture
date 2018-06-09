@@ -19,8 +19,3 @@ if(program.getAvengers){
     console.log(avengers)
   })
 }
-  
- /* 
-  var marvel = new Marvel()
-  marvel.getFirst100()
-*/
